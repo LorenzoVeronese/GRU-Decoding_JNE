@@ -3,7 +3,7 @@ Official repository for the paper ["**Optimized AI-based neural decoding from BO
 
 ## Results
 The following are a few reconstructions obtained : 
-<p align="center"><img src="./figures/Results.pdf" width="600" ></p>
+<p align="center"><img src="./figures/Results.png" width="600" ></p>
 
 ## Instructions 
 
