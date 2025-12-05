@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Optimized AI-based neural decoding from BOLD fMRI signal for analyzing visual and semantic ROIs">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Optimized AI-based Neural Decoding</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    body { font-family: 'Noto Sans', sans-serif; }
+    .title { font-family: 'Google Sans', sans-serif; }
+    .publication-title { font-family: 'Google Sans', sans-serif; font-weight: bold; }
+    .publication-authors { font-family: 'Google Sans', sans-serif; color: #4a4a4a; }
+    .link-block a { text-decoration: none; color: inherit; }
+    .abstract-box { background-color: #f5f5f5; padding: 30px; border-radius: 10px; }
+    
+    /* MODIFIED TABLE STYLE */
+    .result-table { 
+      margin: 0 auto; 
+      width: 90%; 
+      border-collapse: collapse; 
+      /* Added shadow and background to pop out */
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+      background-color: #ffffff;
+    }
+    
+    .result-table th, .result-table td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+    .result-table th { background-color: #f2f2f2; }
+    .highlight-row { background-color: #e8f4ff; font-weight: bold; }
+    img { border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); }
+    code { background-color: #f5f5f5; color: #d63384; padding: 2px 4px; border-radius: 4px; }
+    
+    /* REDUCED SPACING HERE */
+    section.section {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Optimized AI-based neural decoding from BOLD fMRI signal</h1>
+          <h2 class="subtitle is-4">Analyzing visual and semantic ROIs in the human visual system</h2>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <strong>Lorenzo Veronese</strong><sup>1</sup>, Andrea Moglia<sup>1</sup>, Nicolò Pecco<sup>1</sup>, <br>
+              Pasquale Anthony Della Rosa<sup>2</sup>, Paola Scifo<sup>3</sup>, Luca Mainardi<sup>1</sup>, Pietro Cerveri<sup>1,4</sup>
+            </span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>Politecnico di Milano, <sup>2</sup>Ospedale San Raffaele, <sup>3</sup>Universitá di Pavia</span>
+          </div>
+          
+          <div class="is-size-5 has-text-centered" style="margin-top: 10px; color: #666;">
+            <strong>Journal of Neural Engineering (2025)</strong>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://doi.org/10.1088/1741-2552/adfbc2" class="button is-dark is-rounded">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="button is-dark is-rounded">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified abstract-box">
+          <p>
+            We introduce a novel two-stage AI architecture for reconstructing visual stimuli from fMRI BOLD signals. 
+            By leveraging a <strong>Gated Recurrent Unit (GRU)</strong> for non-linear mapping and a 
+            <strong>Latent Diffusion Model (LDM)</strong> guided by CLIP embeddings, we achieve competitive 
+            reconstruction fidelity while reducing first-stage complexity by <strong>85%</strong>.
+          </p>
+          <p>
+            Our approach addresses the complexity and noisiness of fMRI data by splitting reconstruction into two phases:
+            a coarse reconstruction using a VDVAE, followed by a refined generation using LDM. We further demonstrate 
+            that analyzing specific semantic ROIs (Floc) improves semantic coherence, while visual areas (V1-V4) 
+            maintain structural fidelity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Methodology</h2>
+        <img src="./figures/Methods.png" alt="Methodology Pipeline" width="100%">
+        <p class="content has-text-justified" style="margin-top:15px;">
+          The framework transforms fMRI BOLD signals into beta weights, maps them to a VAE latent space using a 
+          non-linear GRU network, and reconstructs the image using a Latent Diffusion Model conditioned on CLIP embeddings.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Quantitative Results</h2>
+    <div class="content has-text-centered">
+      <p>Comparison against State-of-the-Art methods on the NSD dataset.</p>
+      <table class="result-table">
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>SSIM &uarr;</th>
+            <th>PixCorr &uarr;</th>
+            <th>CLIP &uarr;</th>
+            <th>Parameters &darr;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Takagi et al. [15]</td>
+            <td>0.325</td>
+            <td>-</td>
+            <td>0.770</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Ozcelik et al. [19]</td>
+            <td>0.356</td>
+            <td>0.254</td>
+            <td>0.915</td>
+            <td>1.4B</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>Ours (15 latents)</td>
+            <td>0.352</td>
+            <td>0.255</td>
+            <td>0.921</td>
+            <td>12.4M (-99%)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Reconstruction Quality</h2>
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <img src="./figures/Results.png" alt="Qualitative Results" width="100%">
+        <p style="margin-top:10px;">Comparison of Ground Truth, Stage 1 (VDVAE), and Stage 2 (Final LDM).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@Article{Veronese2025,
+  author    = {Veronese, Lorenzo and Moglia, Andrea and Pecco, Nicolò and Anthony Della Rosa, Pasquale and Scifo, Paola and Mainardi, Luca and Cerveri, Pietro},
+  journal   = {Journal of Neural Engineering},
+  title     = {Optimized AI-based neural decoding from BOLD fMRI signal for analyzing visual and semantic ROIs in the human visual system},
+  year      = {2025},
+  issn      = {1741-2552},
+  month     = aug,
+  number    = {4},
+  pages     = {046048},
+  volume    = {22},
+  doi       = {10.1088/1741-2552/adfbc2},
+  publisher = {IOP Publishing},
+}</code></pre>
+  </div>
+</section>
+
+<section class="section" style="background-color:#ffffff;">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Authors</h2>
+    <p>
+      <strong>Lorenzo Veronese 
+        <a href="https://www.linkedin.com/in/lorenzo-v-veronese" target="_blank">
+          <span class="icon"><i class="fab fa-linkedin" style="color:#0077b5;"></i></span>
+        </a>:
+      </strong> Conceived the study, developed the methodology, implemented experiments, performed analysis, and edited the manuscript.<br>
+      <strong>Andrea Moglia:</strong> Assisted in paper review.<br>
+      <strong>Nicolò Pecco 
+        <a href="https://www.linkedin.com/in/nicolo-pecco/" target="_blank">
+          <span class="icon"><i class="fab fa-linkedin" style="color:#0077b5;"></i></span>
+        </a>:
+      </strong> Participated in data analysis and synthesis, and reviewed the manuscript.<br>
+      <strong>Pasquale Anthony Della Rosa:</strong> Provided insights on cognitive neuroscience and fMRI imaging, and reviewed the manuscript..<br>
+      <strong>Paola Scifo:</strong> Provided insights on fMRI imaging.<br>
+      <strong>Luca Mainardi:</strong> Assisted in the paper reviewing process.<br>
+      <strong>Pietro Cerveri:</strong> Conceived the study, supervised the work, and provided financial support.
+    </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        Website template based on <a href="https://nerfies.github.io/">Nerfies</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
