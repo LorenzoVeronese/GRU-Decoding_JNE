@@ -30,11 +30,11 @@ The following are a few reconstructions obtained :
 
 ### Preprocessing and Neural Decoding
 
-* While in the root folder, run:
+* To execute the full pipeline, run the following command from the root directory:
 	```
 	run_all_commands.py
 	```
-	In this convenient code, parameters of the model can be set, steps of the decoding can be selected, and data can be stored for further analysis.
+	This script serves as the main entry point for the project. It allows you to configure model hyperparameters, select specific decoding stages (e.g., Stage 1 vs. Stage 2), and save output data for quantitative analysis.
 
 ## References
 - Codes of our neural decoding pipeline are an evolution of [brain-diffuser] (https://github.com/ozcelikfu/brain-diffuser)
