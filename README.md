@@ -1,7 +1,9 @@
 # GRU-Based Neural Decoding
 Official repository for the paper ["**Optimized AI-based neural decoding from BOLD fMRI signal for analyzing visual and semantic ROIs in the human visual system**"](https://iopscience.iop.org/article/10.1088/1741-2552/adfbc2/meta) by Lorenzo Veronese et al. published on Journal of Neural Engineering.
 
-<p align="center"><img src="./figures/Methods.png" width="600" ></p> 
+## Results
+The following are a few reconstructions obtained : 
+<p align="center"><img src="./figures/Results.png" width="600" ></p>
 
 ## Instructions 
 
@@ -36,6 +38,25 @@ Official repository for the paper ["**Optimized AI-based neural decoding from BO
 
 ## References
 - Codes of our neural decoding pipeline are an evolution of [brain-diffuser](https://github.com/ozcelikfu/brain-diffuser)
+- Dataset used is the [Natural Scenes Dataset](https://naturalscenesdataset.org/)
 - Codes in vdvae directory are derived from [openai/vdvae](https://github.com/openai/vdvae)
-- Codes in versatile_diffusion directory are derived from earlier version of [SHI-Labs/Versatile-Diffusion](https://github.com/SHI-Labs/Versatile-Diffusion)
-- Dataset used in the studies is obtained from [Natural Scenes Dataset](https://naturalscenesdataset.org/)
+- Codes in versatile_diffusion directory are derived from [SHI-Labs/Versatile-Diffusion](https://github.com/SHI-Labs/Versatile-Diffusion)
+
+
+## Citation
+If you find this work helpful, please consider citing our paper:
+
+```bibtex
+@Article{Veronese2025,
+  author    = {Veronese, Lorenzo and Moglia, Andrea and Pecco, Nicolò and Anthony Della Rosa, Pasquale and Scifo, Paola and Mainardi, Luca and Cerveri, Pietro},
+  journal   = {Journal of Neural Engineering},
+  title     = {Optimized AI-based neural decoding from BOLD fMRI signal for analyzing visual and semantic ROIs in the human visual system},
+  year      = {2025},
+  issn      = {1741-2552},
+  month     = aug,
+  number    = {4},
+  pages     = {046048},
+  volume    = {22},
+  doi       = {10.1088/1741-2552/adfbc2},
+  publisher = {IOP Publishing},
+}```
