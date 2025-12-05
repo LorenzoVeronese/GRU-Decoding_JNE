@@ -42,7 +42,6 @@ The following are a few reconstructions obtained :
 - Codes in vdvae directory are derived from [openai/vdvae](https://github.com/openai/vdvae)
 - Codes in versatile_diffusion directory are derived from [SHI-Labs/Versatile-Diffusion](https://github.com/SHI-Labs/Versatile-Diffusion)
 
-
 ## Citation
 If you find this work helpful, please consider citing our paper:
 
@@ -59,4 +58,14 @@ If you find this work helpful, please consider citing our paper:
   volume    = {22},
   doi       = {10.1088/1741-2552/adfbc2},
   publisher = {IOP Publishing},
-}```
+}
+```
+
+## Authors
+* **[Lorenzo Veronese](https://www.linkedin.com/in/lorenzo-v-veronese):** Conceived the study, developed the methodology, implemented experiments, performed analysis, and edited the manuscript.
+* **Andrea Moglia:** Assisted in paper review.
+* **[Nicolò Pecco](https://www.linkedin.com/in/nicolo-pecco/):** Participated in data analysis and synthesis, and reviewed the manuscript.
+* **Pasquale Anthony Della Rosa:** Provided insights on cognitive neuroscience and fMRI imaging, and reviewed the manuscript.
+* **Paola Scifo:** Provided insights on fMRI imaging.
+* **Luca Mainardi:** Assisted in the paper reviewing process.
+* **Pietro Cerveri:** Conceived the study, supervised the work, and provided financial support.
