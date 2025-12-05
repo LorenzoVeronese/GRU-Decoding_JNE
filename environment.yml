@@ -1,4 +1,4 @@
-name: brain-diffuser
+name: gru-decoding
 channels:
   - pytorch
   - anaconda
