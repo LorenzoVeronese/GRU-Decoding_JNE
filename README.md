@@ -1,9 +1,7 @@
 # GRU-Based Neural Decoding
 Official repository for the paper ["**Optimized AI-based neural decoding from BOLD fMRI signal for analyzing visual and semantic ROIs in the human visual system**"](https://iopscience.iop.org/article/10.1088/1741-2552/adfbc2/meta) by Lorenzo Veronese et al. published on Journal of Neural Engineering.
 
-## Results
-The following are a few reconstructions obtained : 
-<p align="center"><img src="./figures/Results.png" width="600" ></p>
+<p align="center"><img src="./figures/Methods.png" width="600" ></p>
 
 ## Instructions 
 
