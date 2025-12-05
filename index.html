@@ -97,16 +97,16 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified abstract-box">
           <p>
-            We introduce a novel two-stage AI architecture for reconstructing visual stimuli from fMRI BOLD signals. 
-            By leveraging a <strong>Gated Recurrent Unit (GRU)</strong> for non-linear mapping to <strong>VDVAE latent 
-            space</strong> and a <strong>Latent Diffusion Model (LDM)</strong> guided by CLIP embeddings, we achieve 
-            competitive reconstruction fidelity while reducing first-stage complexity by more then <strong>85%</strong>.
+            <strong>Objective.</strong> AI-based neural decoding reconstructs visual perception by leveraging generative models to map brain activity measured through functional magnetic resonance imaging (fMRI) into the observed visual stimulus.
           </p>
           <p>
-            Our approach addresses the complexity and noisiness of fMRI data by splitting reconstruction into two phases:
-            a coarse reconstruction using a VDVAE, followed by a refined generation using LDM. We further demonstrate 
-            that analyzing specific semantic ROIs (Floc) improves semantic coherence, while visual areas (V1-V4) 
-            maintain structural fidelity.
+            <strong>Approach.</strong> Traditionally, ridge linear models transform fMRI into a latent space, which is then decoded using variational autoencoders (VAE) or LDMs. Owing to the complexity and noisiness of fMRI data, newer approaches split the reconstruction into two sequential stages, the first one providing a rough visual approximation using a VAE, the second one incorporating semantic information through the adoption of LDM guided by contrastive language-image pre-training (CLIP) embeddings. This work addressed some key scientific and technical gaps of the two-stage neural decoding by: (1) implementing a <strong>gated recurrent unit (GRU)</strong>-based architecture to establish a non-linear mapping between the fMRI signal and the VAE latent space, (2) optimizing the dimensionality of the VAE latent space, (3) systematically evaluating the contribution of the first reconstruction stage, and (4) analyzing the impact of different brain regions of interest (ROIs) on reconstruction quality.
+          </p>
+          <p>
+            <strong>Main results.</strong> Experiments on the <strong>NSD dataset</strong>, containing 73,000 unique natural images, along with fMRI of eight subjects, demonstrated that the proposed architecture maintained competitive performance while <strong>reducing the complexity of its first stage by 85%</strong>. The sensitivity analysis showcased that the first reconstruction stage is essential for preserving high structural similarity in the final reconstructions. Restricting analysis to semantic ROIs, while excluding early visual areas, diminished visual coherence, preserving semantics though. The inter-subject repeatability across ROIs was about <strong>92%</strong> and <strong>98%</strong> for visual and semantic metrics, respectively.
+          </p>
+          <p>
+            <strong>Significance.</strong> This study represents a key step toward optimized neural decoding architectures leveraging non-linear models for stimulus prediction. Sensitivity analysis highlighted the interplay between the two reconstruction stages, while ROI-based analysis provided strong evidence that the two-stage AI model reflects the brain’s hierarchical processing of visual information.
           </p>
         </div>
       </div>
@@ -239,8 +239,6 @@
 </body>
 
 </html>
-
-
 
 
 
