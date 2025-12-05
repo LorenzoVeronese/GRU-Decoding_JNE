@@ -37,7 +37,7 @@ The following are a few reconstructions obtained :
 	This script serves as the main entry point for the project. It allows you to configure model hyperparameters, select specific decoding stages (e.g., Stage 1 vs. Stage 2), and save output data for quantitative analysis.
 
 ## References
-- Codes of our neural decoding pipeline are an evolution of [brain-diffuser] (https://github.com/ozcelikfu/brain-diffuser)
+- Codes of our neural decoding pipeline are an evolution of [brain-diffuser](https://github.com/ozcelikfu/brain-diffuser)
 - Codes in vdvae directory are derived from [openai/vdvae](https://github.com/openai/vdvae)
 - Codes in versatile_diffusion directory are derived from earlier version of [SHI-Labs/Versatile-Diffusion](https://github.com/SHI-Labs/Versatile-Diffusion)
 - Dataset used in the studies is obtained from [Natural Scenes Dataset](https://naturalscenesdataset.org/)
