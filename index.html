@@ -11,32 +11,108 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   <style>
-    body { font-family: 'Noto Sans', sans-serif; }
-    .title { font-family: 'Google Sans', sans-serif; }
-    .publication-title { font-family: 'Google Sans', sans-serif; font-weight: bold; }
-    .publication-authors { font-family: 'Google Sans', sans-serif; color: #4a4a4a; }
-    .link-block a { text-decoration: none; color: inherit; }
-    .abstract-box { background-color: #f5f5f5; padding: 30px; border-radius: 10px; }
-    .hero-body {
-      padding-top: 4rem; /* Increased from default (approx 3rem) to 6rem */
+    /* --- COLOR VARIABLES --- */
+    :root {
+      --theme-blue: #007bff;       /* Standard Blue */
+      --theme-blue-light: #e5f2ff; /* Light background blue */
+      --text-color: #4a4a4a;
     }
-    /* MODIFIED TABLE STYLE */
+
+    body { 
+      font-family: 'Noto Sans', sans-serif; 
+      color: var(--text-color);
+    }
+    
+    a {
+      color: var(--theme-blue);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: #0056b3; 
+      text-decoration: underline;
+    }
+
+    .title { font-family: 'Google Sans', sans-serif; }
+    
+    .publication-title { 
+      font-family: 'Google Sans', sans-serif; 
+      font-weight: bold; 
+      color: #333;
+    }
+    
+    .publication-authors { 
+      font-family: 'Google Sans', sans-serif; 
+      color: var(--theme-blue);
+      font-weight: 500;
+    }
+    
+    /* BUTTONS */
+    .link-block a { 
+      color: white !important; 
+      text-decoration: none; 
+    }
+    
+    .button.is-theme {
+      background-color: var(--theme-blue);
+      border-color: transparent;
+      color: white;
+    }
+    .button.is-theme:hover {
+      background-color: #004488; 
+      color: white;
+    }
+
+    .abstract-box { 
+      background-color: #f9f9f9; 
+      padding: 30px; 
+      border-radius: 10px; 
+      border-left: 5px solid var(--theme-blue);
+    }
+    
+    .hero-body {
+      padding-top: 4rem; 
+    }
+
+    /* --- TABLE STYLE (REVERTED TO GRAY HEADERS) --- */
     .result-table { 
       margin: 0 auto; 
       width: 90%; 
       border-collapse: collapse; 
-      /* Added shadow and background to pop out */
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
       background-color: #ffffff;
     }
     
-    .result-table th, .result-table td { border: 1px solid #ddd; padding: 12px; text-align: center; }
-    .result-table th { background-color: #f2f2f2; }
-    .highlight-row { background-color: #e8f4ff; font-weight: bold; }
-    img { border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); }
-    code { background-color: #f5f5f5; color: #d63384; padding: 2px 4px; border-radius: 4px; }
+    .result-table th, .result-table td { 
+      border: 1px solid #ddd; 
+      padding: 12px; 
+      text-align: center; 
+    }
     
-    /* REDUCED SPACING HERE */
+    /* Standard Gray Header */
+    .result-table th { 
+      background-color: #f2f2f2; 
+      color: #333; 
+      font-weight: bold;
+    }
+    
+    /* Blue Highlight only on the specific row */
+    .highlight-row { 
+      background-color: var(--theme-blue-light);
+      font-weight: bold; 
+      color: var(--theme-blue);
+    }
+
+    img { border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); }
+    
+    code { 
+      background-color: #f5f5f5; 
+      color: var(--theme-blue);
+      padding: 2px 4px; 
+      border-radius: 4px; 
+      border: 1px solid #ddd;
+    }
+    
     section.section {
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
@@ -60,24 +136,24 @@
             </span>
           </div>
 
-          <div class="is-size-6 publication-authors">
+          <div class="is-size-6 publication-authors" style="color: #666;">
             <span class="author-block"><sup>1</sup>Politecnico di Milano, <sup>2</sup>Ospedale San Raffaele, <sup>3</sup>Universitá di Pavia</span>
           </div>
           
-          <div class="is-size-5 has-text-centered" style="margin-top: 10px; color: #666;">
+          <div class="is-size-5 has-text-centered" style="margin-top: 10px; color: var(--theme-blue);">
             <strong>Journal of Neural Engineering (2025)</strong>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://doi.org/10.1088/1741-2552/adfbc2" class="button is-dark is-rounded">
+                <a href="https://doi.org/10.1088/1741-2552/adfbc2" class="button is-theme is-rounded">
                   <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/LorenzoVeronese/GRU-Decoding_JNE/tree/main" class="button is-dark is-rounded">
+                <a href="https://github.com/LorenzoVeronese/GRU-Decoding_JNE/tree/main" class="button is-theme is-rounded">
                   <span class="icon"><i class="fab fa-github"></i></span>
                   <span>Code</span>
                 </a>
@@ -139,7 +215,6 @@
           <tr>
             <th>Method</th>
             <th>SSIM &uarr;</th>
-            <th>PixCorr &uarr;</th>
             <th>CLIP &uarr;</th>
             <th>Parameters &darr;</th>
           </tr>
@@ -148,21 +223,18 @@
           <tr>
             <td>Takagi et al. [15]</td>
             <td>0.325</td>
-            <td>-</td>
             <td>0.770</td>
             <td>-</td>
           </tr>
           <tr>
             <td>Ozcelik et al. [19]</td>
             <td>0.356</td>
-            <td>0.254</td>
             <td>0.915</td>
             <td>1.4B</td>
           </tr>
           <tr class="highlight-row">
             <td>Ours (15 latents)</td>
             <td>0.352</td>
-            <td>0.255</td>
             <td>0.921</td>
             <td>12.4M (-99%)</td>
           </tr>
@@ -209,13 +281,13 @@
     <p>
       <strong>Lorenzo Veronese 
         <a href="https://www.linkedin.com/in/lorenzo-v-veronese" target="_blank">
-          <span class="icon"><i class="fab fa-linkedin" style="color:#0077b5;"></i></span>
+          <span class="icon"><i class="fab fa-linkedin" style="color:var(--theme-blue);"></i></span>
         </a>:
       </strong> Conceived the study, developed the methodology, implemented experiments, performed analysis, and edited the manuscript.<br>
       <strong>Andrea Moglia:</strong> Assisted in paper review.<br>
       <strong>Nicolò Pecco 
         <a href="https://www.linkedin.com/in/nicolo-pecco/" target="_blank">
-          <span class="icon"><i class="fab fa-linkedin" style="color:#0077b5;"></i></span>
+          <span class="icon"><i class="fab fa-linkedin" style="color:var(--theme-blue);"></i></span>
         </a>:
       </strong> Participated in data analysis and synthesis, and reviewed the manuscript.<br>
       <strong>Pasquale Anthony Della Rosa:</strong> Provided insights on cognitive neuroscience and fMRI imaging, and reviewed the manuscript.<br>
@@ -237,8 +309,4 @@
 </footer>
 
 </body>
-
 </html>
-
-
-
