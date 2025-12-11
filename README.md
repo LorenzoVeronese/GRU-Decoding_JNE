@@ -14,8 +14,12 @@ Official repository for the paper ["**Optimized AI-based neural decoding from BO
     ```
 	python download_data.py
 	```
+    
 2. Download "COCO_73k_annots_curated.npy" file from [HuggingFace NSD](https://huggingface.co/datasets/pscotti/naturalscenesdataset/tree/main)
-
+	```
+	https://huggingface.co/datasets/pscotti/naturalscenesdataset/resolve/main/COCO_73k_annots_curated.npy?download=true
+ 	```
+ 
 3. Download pretrained VDVAE model files and put them in `vdvae/model/` folder
 	```
 	wget https://openaipublic.blob.core.windows.net/very-deep-vaes-assets/vdvae-assets-2/imagenet64-iter-1600000-log.jsonl
